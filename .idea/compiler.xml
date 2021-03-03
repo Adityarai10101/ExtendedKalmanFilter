@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="ExtendedKalmanFilter.ExtendedKalmanFilter.main" target="14" />
-      <module name="ExtendedKalmanFilter.ExtendedKalmanFilter.test" target="14" />
+      <module name="ExtendedKalmanFilter.ExtendedKalmanFilter.main~1" target="14" />
+      <module name="ExtendedKalmanFilter.ExtendedKalmanFilter.test~1" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>
