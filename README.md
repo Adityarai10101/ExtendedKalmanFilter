@@ -2,6 +2,7 @@
 An EKF implementation for robotics
 
 ##GIT notes – command line
+
 ####How to use .gitignore
 1) Visit https://git-scm.com/docs/gitignore for pointers on how to add to the .gitignore file. Everything in this file will be ignored when committing new changes.
 
@@ -15,7 +16,7 @@ An EKF implementation for robotics
 
 ####Getting the newest code
 1) ```git pull``` will get the latest updates, of your current brnach, from github.
-
+2) ```git fetch origin <branch>``` will create a local copy of a new branch from github
 
 ####Uploading the newest code
 1) ```git push -u origin <branch>``` will upload a new local branch to github
