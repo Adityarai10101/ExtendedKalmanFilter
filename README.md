@@ -22,3 +22,6 @@ An EKF implementation for robotics
 1) ```git push -u origin <branch>``` will upload a new local branch to github
 2) ```git push``` will be used to push subsequent snapshots
 
+## Reference git. 
+Reference this link while coding:
+https://github.com/wmlynar/extended-kalman-filter/tree/master/src/main/java/com/github/wmlynar/ekf
