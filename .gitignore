@@ -8,3 +8,4 @@ ExtendedKalmanFilter/.gradle/**
 #ignores everything in the /gradle under the main folder
 ExtendedKalmanFilter/gradle/**
 
+*.xml
