@@ -1,4 +1,4 @@
-
+package kalman;
 /* Refer to http://en.wikipedia.org/wiki/Kalman_filter for
  mathematical details. The naming scheme is that variables get names
  that make sense, and are commented with their analog in

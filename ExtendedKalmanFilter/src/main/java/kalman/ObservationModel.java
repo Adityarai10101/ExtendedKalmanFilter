@@ -1,28 +1,30 @@
+package kalman;
+
 public abstract class ObservationModel {
 
 
     /* This group of matrices must be specified by the user. */
     /* H_k */
-    /*public Matrix observation_model = new Matrix(observationDimension(), stateDimension());*/
+    /*public kalman.Matrix observation_model = new kalman.Matrix(observationDimension(), stateDimension());*/
     /* R_k */
-    /*public Matrix observation_noise_covariance = new Matrix(observationDimension(), observationDimension());*/
+    /*public kalman.Matrix observation_noise_covariance = new kalman.Matrix(observationDimension(), observationDimension());*/
 
     /* The observation is modified by the user every time step. */
     /* z_k */
-    /*public Matrix observation = new Matrix(observationDimension(), 1);*/
+    /*public kalman.Matrix observation = new kalman.Matrix(observationDimension(), 1);*/
 
     /* This group of matrices are updated every time step by the filter. */
     /* y-tilde_k */
-    /*public Matrix innovation = new Matrix(observationDimension(), 1);*/
+    /*public kalman.Matrix innovation = new kalman.Matrix(observationDimension(), 1);*/
     /* S_k */
-    /*public Matrix innovation_covariance = new Matrix(observationDimension(), observationDimension());*/
+    /*public kalman.Matrix innovation_covariance = new kalman.Matrix(observationDimension(), observationDimension());*/
     /* S_k^-1 */
-    /*public Matrix inverse_innovation_covariance = new Matrix(observationDimension(), observationDimension());*/
+    /*public kalman.Matrix inverse_innovation_covariance = new kalman.Matrix(observationDimension(), observationDimension());*/
     /* K_k */
-    /*public Matrix optimal_gain = new Matrix(stateDimension(), observationDimension());*/
+    /*public kalman.Matrix optimal_gain = new kalman.Matrix(stateDimension(), observationDimension());*/
 
     /* This group is used for meaningless intermediate calculations */
-    /*public Matrix vertical_scratch = new Matrix(stateDimension(), observationDimension());*/
+    /*public kalman.Matrix vertical_scratch = new kalman.Matrix(stateDimension(), observationDimension());*/
 
     /*public abstract int observationDimension();*/
 

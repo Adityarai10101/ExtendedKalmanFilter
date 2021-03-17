@@ -1,27 +1,29 @@
+package kalman;
+
 public abstract class ProcessModel {
 
     /* This group of matrices must be specified by the user. */
-    //TODO public Matrix state_function = new Matrix(stateDimension(), 1);
-    //TODO public Matrix state_jacobian = new Matrix(stateDimension(), stateDimension());
-    //TODO public Matrix process_noise_covariance = new Matrix(stateDimension(), stateDimension());
+    //TODO public kalman.Matrix state_function = new kalman.Matrix(stateDimension(), 1);
+    //TODO public kalman.Matrix state_jacobian = new kalman.Matrix(stateDimension(), stateDimension());
+    //TODO public kalman.Matrix process_noise_covariance = new kalman.Matrix(stateDimension(), stateDimension());
 
     /* This group of matrices are updated every time step by the filter. */
-    /*public Matrix state_estimate = new Matrix(stateDimension(), 1);*/
-    /*public Matrix estimate_covariance = new Matrix(stateDimension(), stateDimension());*/
+    /*public kalman.Matrix state_estimate = new kalman.Matrix(stateDimension(), 1);*/
+    /*public kalman.Matrix estimate_covariance = new kalman.Matrix(stateDimension(), stateDimension());*/
 
     /* This group is used for meaningless intermediate calculations */
     /*
     TODO change matrix definitions based on new matrix class
-    public Matrix big_square_scratch = new Matrix(stateDimension(), stateDimension());
-    public Matrix big_square_scratch2 = new Matrix(stateDimension(), stateDimension());
-    public Matrix identity_scratch = new Matrix(stateDimension(), stateDimension());
-    public Matrix state_transition = new Matrix(stateDimension(), stateDimension());
-    public Matrix predicted_state_midpoint = new Matrix(stateDimension(), 1);
-    public Matrix state_delta_scratch = new Matrix(stateDimension(), 1);*/
+    public kalman.Matrix big_square_scratch = new kalman.Matrix(stateDimension(), stateDimension());
+    public kalman.Matrix big_square_scratch2 = new kalman.Matrix(stateDimension(), stateDimension());
+    public kalman.Matrix identity_scratch = new kalman.Matrix(stateDimension(), stateDimension());
+    public kalman.Matrix state_transition = new kalman.Matrix(stateDimension(), stateDimension());
+    public kalman.Matrix predicted_state_midpoint = new kalman.Matrix(stateDimension(), 1);
+    public kalman.Matrix state_delta_scratch = new kalman.Matrix(stateDimension(), 1);*/
 /*
     TODO change methods based on new classes
 
-    public ProcessModel() {
+    public kalman.ProcessModel() {
         identity_scratch.set_identity_matrix();
     }
 

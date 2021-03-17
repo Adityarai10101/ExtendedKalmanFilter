@@ -1,8 +1,52 @@
-//TODO: implement the apache commons math matrix class into this matrix class to make life easier for everyone
+package kalman;
 
+import org.apache.commons.math3.linear.RealMatrix;
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ * This kalman.Matrix class adapts the generic commons-math3's code to make it more suitable for our specific implementation
+ */
 public class Matrix {
 
-    //TODO: Matrix constructor. Takes integer params rows and columns
+    /**
+     * class logger
+     */
+    private static final Logger logger = LogUtils.getLogger(Matrix.class.getName());
+
+    static
+    {
+        LogUtils.setLoggerLevel(logger, Level.SEVERE);
+    }
+
+    /**
+     * 2d double array that stores the matrix data
+     */
+    private double[][] data;
+
+    /**
+     * num rows
+     */
+    private int rows;
+
+    /**
+     * num cols
+     */
+    private int cols;
+
+
+    //TODO: kalman.Matrix constructor. Takes integer params rows and columns
+    /**
+     * Constructor #1
+     * @param rows number of rows in the matrix
+     * @param columns number of columns in the matrix
+     */
+    public Matrix(int rows, int columns)
+    {
+
+    }
 
     //TODO: public void set_matrix(). Takes 2D array and sets matrix.
 
@@ -18,7 +62,7 @@ public class Matrix {
 
     //TODO: multiply_matrix(a, b, c). Same idea.
 
-    //TODO: subtract_from_identity_matrix(Matrix a)
+    //TODO: subtract_from_identity_matrix(kalman.Matrix a)
 
     //TODO: convert all these functions below
 
@@ -28,7 +72,7 @@ public class Matrix {
 //     * This is multiplying a by b-tranpose so it is like multiply_matrix but
 //     * references to b reverse rows and cols.
 //     */
-//    public static void multiply_by_transpose_matrix(Matrix a, Matrix b, Matrix c) {
+//    public static void multiply_by_transpose_matrix(kalman.Matrix a, kalman.Matrix b, kalman.Matrix c) {
 //        assert (a.cols == b.cols);
 //        assert (a.rows == c.rows);
 //        assert (b.rows == c.cols);
@@ -49,7 +93,7 @@ public class Matrix {
 
 
 //    /* Transpose input and put the result in output. */
-//    public static void transpose_matrix(Matrix input, Matrix output) {
+//    public static void transpose_matrix(kalman.Matrix input, kalman.Matrix output) {
 //        assert (input.rows == output.cols);
 //        assert (input.cols == output.rows);
 //        for (int i = 0; i < input.rows; ++i) {
@@ -60,7 +104,7 @@ public class Matrix {
 //    }
 //
 //    /* Whether two matrices are approximately equal. */
-//    public static boolean equal_matrix(Matrix a, Matrix b, double tolerance) {
+//    public static boolean equal_matrix(kalman.Matrix a, kalman.Matrix b, double tolerance) {
 //        assert (a.rows == b.rows);
 //        assert (a.cols == b.cols);
 //        for (int i = 0; i < a.rows; ++i) {
@@ -134,7 +178,7 @@ public class Matrix {
 //     * This is not the fastest way to invert matrices, so this is quite possibly
 //     * the bottleneck.
 //     */
-//    public static boolean destructive_invert_matrix(Matrix input, Matrix output) {
+//    public static boolean destructive_invert_matrix(kalman.Matrix input, kalman.Matrix output) {
 //        assert (input.rows == input.cols);
 //        assert (input.rows == output.rows);
 //        assert (input.rows == output.cols);
@@ -196,7 +240,7 @@ public class Matrix {
 //        }
 //    }
 //
-//    public static void add_scaled_matrix(Matrix a, double s, Matrix b, Matrix c) {
+//    public static void add_scaled_matrix(kalman.Matrix a, double s, kalman.Matrix b, kalman.Matrix c) {
 //        assert (a.rows == b.rows);
 //        assert (a.rows == c.rows);
 //        assert (a.cols == b.cols);
