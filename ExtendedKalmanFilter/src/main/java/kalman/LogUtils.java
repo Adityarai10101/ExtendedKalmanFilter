@@ -1,5 +1,6 @@
 package kalman;
 
+import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.Handler;
@@ -37,9 +38,21 @@ public class LogUtils {
     }
 
     /**
+     * whether to override all other set logs.
+     */
+    private static final boolean IS_OVERRIDE = false;
+
+    /**
+     * override level
+     */
+    private static final Level OVERRIDE_LEVEL = Level.SEVERE;
+
+    /**
      * the logger for LogUtils
      */
     private static final Logger ROOT = Logger.getLogger("root");
+
+
 
     /**
      * creates or finds the logger for the particular subsystem
@@ -47,8 +60,13 @@ public class LogUtils {
      * @return logger
      */
     public static Logger getLogger(String cname) {
+        Logger ret = Logger.getLogger(cname);
+        ret.setUseParentHandlers(false);
 
-        return Logger.getLogger(cname);
+        ConsoleHandler handler = new ConsoleHandler();
+        ret.addHandler(handler);
+
+        return ret;
 
     }
 
@@ -59,13 +77,22 @@ public class LogUtils {
      */
     public static void setLoggerLevel(Logger logger, Level targetLevel)
     {
-        logger.setLevel(targetLevel);
+        if (IS_OVERRIDE)
+            logger.setLevel(OVERRIDE_LEVEL);
+        else
+            logger.setLevel(targetLevel);
 
         for (Handler h : logger.getHandlers())
         {
-            h.setLevel(targetLevel);
+            if (IS_OVERRIDE)
+                h.setLevel(OVERRIDE_LEVEL);
+            else
+                h.setLevel(targetLevel);
         }
+        if (IS_OVERRIDE)
+            ROOT.log(Level.WARNING, "(" + logger.getName() + ") level override: " + OVERRIDE_LEVEL.getName());
+        else
+            ROOT.log(Level.INFO, "(" + logger.getName() + ") level set: " + targetLevel.getName());
 
-        ROOT.log(Level.INFO, "(" + logger.getName() + ") level set: " + targetLevel.getName());
     }
 }
