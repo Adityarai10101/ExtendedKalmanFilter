@@ -11,14 +11,19 @@
  TODO: comment on the dimension of the matrices */
 
 public class KalmanFilter {
+    public double time = 0;
+    public double maximalTimeStep = Double.MAX_VALUE;
+    public ProcessModel model;
 
-
-    public KalmanFilter() {
-
+    public KalmanFilter()
+    {
+        model = new ProcessModel();
     }
 
-    public void setMaximalTimeStep() {
+    public KalmanFilter(ProcessModel model) {
+    }
 
+    public void setMaximalTimeStep(double maximalTimeStep) {
     }
 
     /*
@@ -34,31 +39,32 @@ public class KalmanFilter {
      * It is also advisable to initialize with reasonable guesses for
      * f.state_estimate f.estimate_covariance
      */
-    public void update() {
-
+    public void update(double t, ObservationModel obs) {
+\
+ */
     }
 
     /* Just the prediction phase of update. */
-    public void predict() {
+    public void predict(doublt dt) {
 
     }
 
     // unfortunately there is no observable improvement
-    public void predict_rk2() {
+    public void predict_rk2(double dt) {
 
     }
 
     // this requires a lot of iterations (step size 0.001)
-    public void predict_continuous() {
+    public void predict_continuous(double dt) {
     }
 
     // this requires a lot of iterations (step size 0.001)
-    public void predict_continuous_rk2() {
+    public void predict_continuous_rk2(double dt) {
 
     }
 
     /* Just the estimation phase of update. */
-    void estimate() {
+    void estimate(ObservationModel obs) {
 
     }
 }
