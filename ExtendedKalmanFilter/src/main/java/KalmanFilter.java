@@ -10,6 +10,8 @@
  Vectors are handled as n-by-1 matrices.
  TODO: comment on the dimension of the matrices */
 
+import java.util.*;
+
 public class KalmanFilter {
     public double time = 0;
     public double maximalTimeStep = Double.MAX_VALUE;
@@ -39,13 +41,27 @@ public class KalmanFilter {
      * It is also advisable to initialize with reasonable guesses for
      * f.state_estimate f.estimate_covariance
      */
+
+    /*
+    Needs:
+    -matrix (ObservationModel)
+    -vector of ObsercationModel (obs[0], obs[1])
+    -covariance (found in ObservationModel?)
+    -innovation (found in ObersvationModel)
+    -time (double t)
+    -Kalman gain (innovation / covariance)
+     */
     public void update(double t, ObservationModel obs) {
-\
- */
+
     }
 
     /* Just the prediction phase of update. */
-    public void predict(doublt dt) {
+
+    /*
+    rolls state to a new time
+    rolls uncertianty to a new time
+     */
+    public void predict(double dt) {
 
     }
 
